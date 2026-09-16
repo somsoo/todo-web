@@ -525,9 +525,9 @@
                 showToast("복사할 할 일이 없습니다.");
                 return;
             }
-            let text = "📋 내 할 일 목록 (Todo Web)
+            let text = `📋 내 할 일 목록 (Todo Web)
 --------------------------
-";
+`;
             tasks.forEach((t, i) => {
                 const mark = t.completed ? "✓" : "○";
                 const dday = calculateDday(t.dueDate);

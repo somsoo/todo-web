@@ -40,7 +40,7 @@
           "applicationCategory": "ProductivityApplication",
           "operatingSystem": "All",
           "browserRequirements": "Requires JavaScript. Requires HTML5.",
-          "description": "구독·회원가입 없는 100% 로컬퍼스트 할 일 관리 도구. D-day 마감일, 3단계 우선순위, 프로젝트 분류 무료.",
+          "description": "회원가입 없이 이 브라우저에 저장되는 할 일 관리 도구. D-day 마감일, 3단계 우선순위, 5가지 카테고리 분류 무료.",
           "image": "https://todo.enjoy-onepage.com/og-image.png",
           "offers": {
             "@type": "Offer",
@@ -57,7 +57,7 @@
               "name": "작성한 할 일 데이터가 서버로 전송되거나 외부로 유출되나요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "아닙니다. Todo Web은 100% 로컬퍼스트(Local-First) 원칙에 따라 사용자의 웹 브라우저 로컬 저장소(localStorage/IndexedDB)에만 암호화 저장됩니다. 외부 서버로 전송되지 않아 완전한 프라이버시가 보장됩니다."
+                "text": "아니요. 할 일은 이 브라우저의 localStorage에만 저장되고 서버로 보내지 않습니다. 암호화하지는 않으므로 기기를 함께 쓴다면 이 점을 알아 두세요."
               }
             },
             {
@@ -65,7 +65,7 @@
               "name": "브라우저 캐시를 지우면 할 일 데이터가 모두 사라지나요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "브라우저 쿠키/캐시 전체 삭제 시 로컬 데이터가 초기화될 수 있습니다. 이를 방지하기 위해 [JSON 백업 다운로드] 버튼을 제공하여 언제든지 내 할 일 목록을 파일로 영구 저장하고 1초 만에 복원할 수 있습니다."
+                "text": "브라우저의 사이트 데이터를 지우면 할 일도 함께 지워질 수 있습니다. 위쪽의 백업 다운로드로 목록을 JSON 파일로 저장해 두면, 복원 버튼으로 다시 불러올 수 있습니다."
               }
             },
             {
@@ -73,7 +73,7 @@
               "name": "Todoist나 MS To Do와 비교했을 때 어떤 점이 다른가요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "기성 상용 앱들은 프로젝트 5개 제한이나 월 $5~10의 구독료를 요구합니다. Todo Web은 회원가입 없이 프로젝트 무제한 생성, 마감일 D-day 계산, 우선순위 태그를 평생 100% 무료로 제공합니다."
+                "text": "이 플래너는 가입 없이 바로 쓰는 대신 기능이 단순합니다. 카테고리 5개, 우선순위 3단계, 마감일 D-day가 있고, 알림·여러 기기 동기화·공유 기능은 없습니다."
               }
             }
           ]
@@ -276,29 +276,29 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
         <div class="border-b border-slate-200 pb-4">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 mb-2">
-            <span>⚖️ 2026년 최신 공식 기준 검증</span>
+            <span>📝 사용 안내</span>
           </div>
           <h3 class="text-xl font-black text-slate-900 tracking-tight">
-            Todo Web 작업 관리 원리 및 실무 생산성 극대화 가이드
+            할 일 플래너 쓰는 법
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 mt-1">
-            본 도구는 아이젠하워 매트릭스(Eisenhower Matrix) 및 GTD(Getting Things Done) 생산성 프레임워크를 바탕으로 설계되었습니다.
+            할 일마다 카테고리(업무·개인·공부·운동·쇼핑), 우선순위(긴급·보통·여유), 마감일을 붙여 기록하는 단순한 플래너입니다. 목록은 최근에 추가한 일이 위에 오며, 우선순위나 마감일에 따라 자동으로 다시 정렬하지는 않습니다.
           </p>
         </div>
 
         <!-- 핵심 산출 공식 박스 -->
         <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">핵심 산출 공식 (Formula & Logic)</div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">D-day 계산</div>
           <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono leading-relaxed">
-            작업 우선순위 점수 = (긴급도 가중치 × 0.6) + (중요도 가중치 × 0.4) | D-Day = 마감일자 - 현재일자(KST)
+            D-day = 마감일 − 오늘 날짜 (이 기기 날짜 기준) | 마감 당일은 D-Day, 지나면 D+일수(지남)
           </div>
         </div>
 
         <!-- 실전 시뮬레이션 사례 -->
         <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
-          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 실전 계산 사례 (Case Study)</div>
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 쓰는 예</div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-            예를 들어, 마감일이 2일 남은 긴급 보고서(D-2)와 마감일이 14일 남은 자기계발 도서 독서가 있을 때, 긴급도와 마감일 알고리즘에 따라 보고서가 상단 1순위로 자동 배치되어 인지 과부하를 줄이고 당일 완수율을 40% 이상 높여줍니다.
+            예를 들어, 이틀 뒤가 마감인 보고서는 우선순위를 '긴급'으로 두고 마감일을 넣으면 D-2로 표시됩니다. 2주 뒤까지 읽을 책은 '여유'로 두면 색으로 구분됩니다. 목록 순서는 바뀌지 않으니, 우선순위 색과 D-day를 보고 오늘 할 일을 고르세요.
           </p>
         </div>
 
@@ -306,17 +306,6 @@
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><span>❓</span> 자주 묻는 질문 (FAQ)</h4>
           
-    <!-- 심층 가이드북 바로가기 (4-1-4 헌법 준수) -->
-    <div class="mt-8 mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-2">2026 실무 가이드</span>
-        <h3 class="text-lg font-bold text-gray-900">공식 기준과 상세 산식이 궁금하신가요?</h3>
-        <p class="text-xs text-gray-600 mt-1">무제한 할 일 관리 & 프로젝트 플래너의 최신 법정 고시, 감면 혜택, 실무 체크리스트를 확인해보세요.</p>
-      </div>
-      <a href="/guides/guide.html" class="whitespace-nowrap px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 text-xs shrink-0">
-        심층 가이드북 읽기 &rarr;
-      </a>
-    </div>
 
     <details class="group border border-slate-200 rounded-xl p-4">
             <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
@@ -324,7 +313,7 @@
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
             </summary>
             <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
-              아닙니다. Todo Web은 100% 로컬퍼스트(Local-First) 원칙에 따라 사용자의 웹 브라우저 로컬 저장소(localStorage/IndexedDB)에만 암호화 저장됩니다. 외부 서버로 전송되지 않아 완전한 프라이버시가 보장됩니다.
+              아니요. 할 일은 이 브라우저의 localStorage에만 저장되고 서버로 보내지 않습니다. 암호화하지는 않으므로 기기를 함께 쓴다면 이 점을 알아 두세요.
             </div>
           </details>
           <details class="group border border-slate-200 rounded-xl p-4">
@@ -333,7 +322,7 @@
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
             </summary>
             <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
-              브라우저 쿠키/캐시 전체 삭제 시 로컬 데이터가 초기화될 수 있습니다. 이를 방지하기 위해 [JSON 백업 다운로드] 버튼을 제공하여 언제든지 내 할 일 목록을 파일로 영구 저장하고 1초 만에 복원할 수 있습니다.
+              브라우저의 사이트 데이터를 지우면 할 일도 함께 지워질 수 있습니다. 위쪽의 백업 다운로드로 목록을 JSON 파일로 저장해 두면, 복원 버튼으로 다시 불러올 수 있습니다.
             </div>
           </details>
           <details class="group border border-slate-200 rounded-xl p-4">
@@ -342,7 +331,7 @@
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
             </summary>
             <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
-              기성 상용 앱들은 프로젝트 5개 제한이나 월 $5~10의 구독료를 요구합니다. Todo Web은 회원가입 없이 프로젝트 무제한 생성, 마감일 D-day 계산, 우선순위 태그를 평생 100% 무료로 제공합니다.
+              이 플래너는 가입 없이 바로 쓰는 대신 기능이 단순합니다. 카테고리 5개, 우선순위 3단계, 마감일 D-day가 있고, 알림·여러 기기 동기화·공유 기능은 없습니다.
             </div>
           </details>
         </div>
@@ -388,7 +377,7 @@ class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; mar
                 <span>·</span>
                 <a class="hover:text-blue-600 transition" href="/terms.html">이용약관</a>
             </div>
-            <p>100% 무서버 클라이언트 사이드 연산 | 데이터 외부 전송 제로 보증</p>
+            <p>입력한 내용은 이 브라우저에만 저장되고 서버로 보내지 않습니다.</p>
             <p class="text-[11px] text-slate-400">© 2026 Todo Web. All rights reserved.</p>
         </div>
     </footer>
